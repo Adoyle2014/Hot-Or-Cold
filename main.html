@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hot || Cold</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="howto">
+			<p>How to play</p>
+			<div id="howtotoggle">
+				<p>Enter a number between 1 and 100.  The closer you get, the higher you move the marker until your on <span>FIRE</span>.</p>
+				<p>Got It?</p>
+			</div>
+		</div>
+
+		<div id="newgame">
+			<p>New Game</p>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div id="titlecontainer">
+			<h1 class="title"><span>Hot</span> || <span>Cold</span></h1>
+			<h2 class="subtitle">By Adam Doyle</h2>
+		</div>
+
+		<div id="container">
+			<img id="fire" src="img/animatedFlames.gif">
+			<img id="pointer" src="img/hotorcold-thermopointer.png">		
+			<div id="guesscontainer">
+				<p>Take a guess!</p>
+				<input type="text" name="userguess" id="userguess" maxlength="3" autocomplete="off"/>
+				<input type="button" name="guessbutton" id="guessbutton" value="Enter Guess"/>
+			</div>
+
+			<div id="gaugecontainer">
+				<div id="thermometer"></div>
+				<div id="slidercontainer"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
