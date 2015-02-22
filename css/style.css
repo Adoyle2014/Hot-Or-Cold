@@ -72,8 +72,7 @@ textarea:focus, input:focus{
 /*------------------ STYLES -------------------------------------*/
 body {
 	position: absolute;
-	left: 8px;
-	
+	left: 8px;	
 	margin: .6em auto;
 	background-color: #350620;
 	border-radius: 5px;
@@ -180,24 +179,20 @@ body {
 #pointer {
 	position: absolute;
 	top: 383px;
-	left: 423px;
+	left: 693px;
 	z-index: 100;
 
 }
 
 #container {
 	position: relative;
-	width: 40%;	
+	width: 60%;	
 	top: 150px;
-	left: 438px;
+	left: 220px;
 }
 
-#guesscontainer {
-	position: relative;
-	float: left;
-	text-align: center;
-	top: 150px;
-	left: 100px;
+.guesscontainer {	
+	text-align: center;	
 	background-color: #e3eff3;
 	padding: 20px;
 	border-radius: 5px;
@@ -205,11 +200,55 @@ body {
 	box-shadow: 3px 3px 10px #000;
 }
 
-#guesscontainer > p {
+.guesscontainer > p {
 	margin-bottom: 20px;
 	cursor: default;
 	font-size: 1.3em;
 }
+
+#guessing {
+	position: relative;
+	float: left;
+	top: 150px;
+	left: 100px;
+}
+
+#tries {
+	position: relative;
+	width: 250px;
+	height: 450px;
+	float: left;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#trycount {
+	position: relative;
+	float: left;
+	cursor: default;
+	font-size: 1.3em;
+	text-decoration: underline;
+}
+
+#guess {
+	position: relative;
+	float: right;
+	cursor: default;
+	font-size: 1.3em;
+	text-decoration: underline;
+}
+
+#trylist {
+	position: relative;
+	top: 40px;
+	list-style: decimal-leading-zero;
+	list-style-position: outside;
+}
+#trylist li {
+	margin-left: 40px;
+	padding-left: 80px;
+}
+
 
 #userguess {
 	text-align: center;
@@ -223,6 +262,7 @@ body {
 	background-color: #350620;
 	color: #e3eff3;
 	font-size: 1.3em;
+	cursor: pointer;
 	
 }
 

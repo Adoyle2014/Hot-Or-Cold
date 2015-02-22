@@ -29,15 +29,24 @@
 
 		<div class="clearfix"></div>
 
+		
+
 		<div id="titlecontainer">
 			<h1 class="title"><span>Hot</span> || <span>Cold</span></h1>
 			<h2 class="subtitle">By Adam Doyle</h2>
 		</div>
 
 		<div id="container">
+			<div id="tries" class="guesscontainer">				
+				<div id="guess"><p>Guess</p></div>					
+				<div id="trycount"><p>Try #</p>	</div>
+				<ol id="trylist">
+					<li>68</li>
+				</ol>
+			</div>
 			<img id="fire" src="img/animatedFlames.gif">
 			<img id="pointer" src="img/hotorcold-thermopointer.png">		
-			<div id="guesscontainer">
+			<div id="guessing" class="guesscontainer">
 				<p>Take a guess!</p>
 				<input type="text" name="userguess" id="userguess" maxlength="3" autocomplete="off"/>
 				<input type="button" name="guessbutton" id="guessbutton" value="Enter Guess"/>
@@ -49,5 +58,6 @@
 			</div>
 		</div>
 	</div>
+	<audio id="fire-sound" src="sound/fire_burning.ogg">
 </body>
 </html>
