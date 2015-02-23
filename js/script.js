@@ -18,7 +18,7 @@ $(document).ready(function() {
 	var enterguess = $("#guessbutton");
 	var number = randomNumber(1, 101);
 	var turns = null     
-	var tryLis =               
+	              
 
 ///Starting Functions--------------------------------------------------
 	gameReset();
@@ -87,7 +87,7 @@ $(document).ready(function() {
 	function moveSlider(amt) {
 		pointer.animate(
 			{ top: amt }, {
-			duration: 500,
+			duration: 2500,
 			easing: 'easeInOutElastic'
 		});
 	};
