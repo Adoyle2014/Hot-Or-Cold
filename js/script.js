@@ -41,9 +41,9 @@ $(document).ready(function() {
 		turns = turns++
 		userguess = parseFloat(userguess, 10);
 
-		if ((isNaN(userguess)) || (userguess % 1 != 0) || (userguess === null)) {
+		if ((isNaN(userguess)) || (userguess % 1 != 0) || (userguess === null) || (userguess > 100) || (userguess < 1)) {
 			$("#userguess").val("");
-			alert("Please enter a whole number!");
+			alert("Please enter a whole number between 1 and 100!");
 			
 		}else{
 
@@ -97,6 +97,7 @@ $(document).ready(function() {
 	function gameWin() {
 		$("body").animate({ backgroundColor: "#aa254d"})
 		$("#fire").css("display", "block");
+		$("#userguess").attr("readOnly", true);
 		pulse();
 		playFire();
 
@@ -107,6 +108,7 @@ $(document).ready(function() {
 	function gameReset() {
 		newgame.addEventListener('click', function() {
 			$("#fire").css("display", "none");
+			$("#userguess").attr("readOnly", false);
 			$("#userguess").css("color", "#0c0006")
 			pulseReset();
 			$("#userguess").val("");
