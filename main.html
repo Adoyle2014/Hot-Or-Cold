@@ -19,6 +19,7 @@
 			<p>How to play</p>
 			<div id="howtotoggle">
 				<p>Enter a number between 1 and 100.  The closer you get, the higher you move the marker until your on <span>FIRE</span>.</p>
+				<p> Use CTRL and - to make game area smaller</p>
 				<p>Got It?</p>
 			</div>
 		</div>
@@ -38,17 +39,13 @@
 
 		<div id="container">
 			<div id="tries" class="guesscontainer">				
-				<div id="guess"><p>Guess</p></div>					
-				<div id="trycount"><p>Try #</p>	</div>
-				<ol id="trylist">
-					<li>68</li>
-				</ol>
+				
 			</div>
 			<img id="fire" src="img/animatedFlames.gif">
 			<img id="pointer" src="img/hotorcold-thermopointer.png">		
 			<div id="guessing" class="guesscontainer">
 				<p>Take a guess!</p>
-				<input type="text" name="userguess" id="userguess" maxlength="3" autocomplete="off"/>
+				<input type="number" min="1" max="100" name="userguess" id="userguess" maxlength="3" autocomplete="off" autofocus/>
 				<input type="button" name="guessbutton" id="guessbutton" value="Enter Guess"/>
 			</div>
 

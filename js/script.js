@@ -25,6 +25,11 @@ $(document).ready(function() {
 	instructionToggle();
 	console.log(number);
 
+	$('#userguess').keypress(function(e){
+      		if(e.keyCode==13)
+      		$('#guessbutton').click();
+    	});
+
 
 
 	
@@ -32,30 +37,44 @@ $(document).ready(function() {
 	$("#guessbutton").click(function() {
 		var userguess = $("#userguess").val()
 		var prevMovement = null
+		var newTryDiv = '<div class="guess">' + userguess + '</div>';
 		turns = turns++
 		userguess = parseFloat(userguess, 10);
-		if (userguess === number) {
-			gameWin();
-		}else{				
-			var moveAmount = (userguess - number);
-			moveAmount = Math.abs(moveAmount);
-			moveAmount = 100 - moveAmount;
-			moveAmount = moveAmount/100;
-			moveAmount = moveAmount*383;
-			moveAmount = 383 - moveAmount;
-			if (turns != 1) {
-				prevMovement = moveAmount;
-				moveSlider(moveAmount);
-				$("#trylist").append
-				moveAmount = null;
-			}else{
-				moveAmount = prevMovement - moveAmount;
-				prevMovement = moveAmount;
-				moveSlider(moveAmount);
-				moveAmount = null;
-			}				
+
+		if ((isNaN(userguess)) || (userguess % 1 != 0) || (userguess === null)) {
+			$("#userguess").val("");
+			alert("Please enter a whole number!");
+			
+		}else{
+
+			if (userguess === number) {
+				gameWin();
+			}else{				
+				var moveAmount = (userguess - number);
+				moveAmount = Math.abs(moveAmount);
+				moveAmount = 100 - moveAmount;
+				moveAmount = moveAmount/100;
+				moveAmount = moveAmount*383;
+				moveAmount = 383 - moveAmount;
+				if (turns != 1) {
+					prevMovement = moveAmount;
+					moveSlider(moveAmount);
+					$("#tries").append(newTryDiv);
+					moveAmount = null;
+					$("#userguess").val("");
+				}else{
+					moveAmount = prevMovement - moveAmount;
+					prevMovement = moveAmount;
+					moveSlider(moveAmount);
+					$("#tries").append(newTryDiv);
+					moveAmount = null;
+					$("#userguess").val("");
+				}				
+			}	
 		}
 	});	
+
+	
 
 	
 ///Random Number Generator------------------------------------------
@@ -90,11 +109,13 @@ $(document).ready(function() {
 			$("#fire").css("display", "none");
 			$("#userguess").css("color", "#0c0006")
 			pulseReset();
-			userguess.value = "";
+			$("#userguess").val("");
+			$("#userguess").focus();
 			moveSlider(383);
 			turns = null
 			number = randomNumber(1, 101);
 			endFire();
+			$("#tries").empty();
 		});
 	}
 

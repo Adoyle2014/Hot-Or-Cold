@@ -106,7 +106,7 @@ body {
 	position: absolute;
 	background-color: #e3eff3;
 	min-width: 200px;
-	min-height: 200px;
+	min-height: 250px;
 	padding: 10px;
 	margin: 10px;
 	border-radius: 5px;
@@ -172,7 +172,7 @@ body {
 	position: absolute;
 	display: none;
 	top: -55px;
-	left: 457px;
+	left: 728px;
 	width: 60px;
 }
 
@@ -215,40 +215,29 @@ body {
 
 #tries {
 	position: relative;
-	width: 250px;
-	height: 450px;
+	width: 240px;
+	height: 300px;
 	float: left;
-	padding-left: 40px;
-	padding-right: 40px;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	top: 60px;
 }
 
-#trycount {
-	position: relative;
-	float: left;
+
+.guess {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
 	cursor: default;
 	font-size: 1.3em;
-	text-decoration: underline;
+	line-height: 1.3em;
+	background-color: #350620;
+	padding: 5px;
+	border-radius: 10px;
+	margin: 10px 10px 10px 10px;
+	
 }
-
-#guess {
-	position: relative;
-	float: right;
-	cursor: default;
-	font-size: 1.3em;
-	text-decoration: underline;
-}
-
-#trylist {
-	position: relative;
-	top: 40px;
-	list-style: decimal-leading-zero;
-	list-style-position: outside;
-}
-#trylist li {
-	margin-left: 40px;
-	padding-left: 80px;
-}
-
 
 #userguess {
 	text-align: center;
