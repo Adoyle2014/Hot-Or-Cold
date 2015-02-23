@@ -59,14 +59,14 @@ $(document).ready(function() {
 				if (turns != 1) {
 					prevMovement = moveAmount;
 					moveSlider(moveAmount);
-					$("#tries").append(newTryDiv);
+					$("#attempts").append(newTryDiv);
 					moveAmount = null;
 					$("#userguess").val("");
 				}else{
 					moveAmount = prevMovement - moveAmount;
 					prevMovement = moveAmount;
 					moveSlider(moveAmount);
-					$("#tries").append(newTryDiv);
+					$("#attempts").append(newTryDiv);
 					moveAmount = null;
 					$("#userguess").val("");
 				}				
@@ -115,7 +115,7 @@ $(document).ready(function() {
 			turns = null
 			number = randomNumber(1, 101);
 			endFire();
-			$("#tries").empty();
+			$("#attempts").empty();
 		});
 	}
 
